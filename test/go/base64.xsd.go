@@ -11,24 +11,24 @@ type MyType1 string
 
 // MyType2 ...
 type MyType2 struct {
-	XMLName    xml.Name `xml:"myType2"`
-	LengthAttr int      `xml:"length,attr,omitempty"`
-	Value      string   `xml:",chardata"`
+	XMLName    xml.Name `xml:"myType2" json:"myType2"`
+	LengthAttr int      `xml:"length,attr,omitempty" json:"length,attr,omitempty"`
+	Value      string   `xml:",chardata" json:",chardata"`
 }
 
 // MyType3 ...
 type MyType3 struct {
-	XMLName    xml.Name `xml:"myType3"`
-	LengthAttr int      `xml:"length,attr,omitempty"`
-	Value      string   `xml:",chardata"`
+	XMLName    xml.Name `xml:"myType3" json:"myType3"`
+	LengthAttr int      `xml:"length,attr,omitempty" json:"length,attr,omitempty"`
+	Value      string   `xml:",chardata" json:",chardata"`
 }
 
 // MyType4 ...
 type MyType4 struct {
-	XMLName   xml.Name `xml:"myType4"`
-	Title     string   `xml:"title"`
-	Blob      string   `xml:"blob"`
-	Timestamp string   `xml:"timestamp"`
+	XMLName   xml.Name `xml:"myType4" json:"myType4"`
+	Title     string   `xml:"title" json:"title"`
+	Blob      string   `xml:"blob" json:"blob"`
+	Timestamp string   `xml:"timestamp" json:"timestamp"`
 }
 
 // MyType5 ...
@@ -36,22 +36,22 @@ type MyType5 string
 
 // MyType6 ...
 type MyType6 struct {
-	CodeAttr       string `xml:"code,attr,omitempty"`
-	IdentifierAttr int    `xml:"identifier,attr,omitempty"`
+	CodeAttr       string `xml:"code,attr,omitempty" json:"code,attr,omitempty"`
+	IdentifierAttr int    `xml:"identifier,attr,omitempty" json:"identifier,attr,omitempty"`
 }
 
 // MyType7 ...
 type MyType7 struct {
-	OriginAttr string `xml:"origin,attr"`
-	Value      string `xml:",chardata"`
+	OriginAttr string `xml:"origin,attr" json:"origin,attr"`
+	Value      string `xml:",chardata" json:",chardata"`
 }
 
 // TopLevel ...
 type TopLevel struct {
-	CostAttr        float64    `xml:"cost,attr,omitempty"`
-	LastUpdatedAttr string     `xml:"LastUpdated,attr,omitempty"`
-	Nested          *MyType7   `xml:"nested"`
-	MyType1         []string   `xml:"myType1"`
-	MyType2         []*MyType2 `xml:"myType2"`
+	CostAttr        float64    `xml:"cost,attr,omitempty" json:"cost,attr,omitempty"`
+	LastUpdatedAttr string     `xml:"LastUpdated,attr,omitempty" json:"LastUpdated,attr,omitempty"`
+	Nested          *MyType7   `xml:"nested" json:"nested"`
+	MyType1         []string   `xml:"myType1" json:"myType1"`
+	MyType2         []*MyType2 `xml:"myType2" json:"myType2"`
 	*MyType6
 }
