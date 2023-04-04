@@ -8,3 +8,5 @@ require (
 	golang.org/x/net v0.7.0
 	gopkg.in/yaml.v3 v3.0.0 // indirect
 )
+
+replace github.com/xuri/xgen/cmd => ./cmd
